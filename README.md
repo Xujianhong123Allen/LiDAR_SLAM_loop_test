@@ -4,19 +4,19 @@
 
 LIO-SAM 原始基于半径范围内的ICP搜索
 
-<img src="./img/RS.png" style="zoom:40%;" />
+<img src="./lidar_slam_loop_test/img/RS.png" style="zoom:40%;" />
 
 Scan Context
 
-<img src="./img/Scan Context.png" style="zoom:40%;" />
+<img src="./lidar_slam_loop_test/img/Scan Context.png" style="zoom:40%;" />
 
 LiDAR-Iris
 
-<img src="./img/LiDAR-Iris.png" style="zoom:45%;" />
+<img src="./lidar_slam_loop_test/img/LiDAR-Iris.png" style="zoom:45%;" />
 
 BoW3D
 
-<img src="./img/BoW3D.png" style="zoom:40%;" />
+<img src="./lidar_slam_loop_test/img/BoW3D.png" style="zoom:40%;" />
 
 
 
@@ -27,7 +27,7 @@ BoW3D
 ~~~shell
 mkdir -p catkin_ws/src
 cd catkin_ws/src
-git clone 
+git clone git@github.com:Xujianhong123Allen/LiDAR_SLAM_loop_test.git
 catkin build
 roslaunch lio_sam run_garden.launch
 roslaunch lidar_slam_loop_test iris_online.launch
