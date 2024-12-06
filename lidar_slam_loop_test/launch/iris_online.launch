@@ -1,0 +1,19 @@
+<launch>
+
+    <!-- LIO-SAM -->
+    <param name="lidar_topic" type="string" value="/lio_sam/mapping/cloud_registered_local" />
+    <param name="odom_topic" type="string" value="/lio_sam/mapping/odometry" />
+    <param name="odom_frame" type="string" value="odom" />
+    <param name="lidar_frame" type="string" value="base_link" />
+
+    <!-- nodes -->
+    <node pkg="lidar_slam_loop_test" type="iris_online" name="iris_online" output="screen" />
+
+    <!-- visulaization -->
+    <arg name="rviz" default="true" />
+    <group if="$(arg rviz)">
+        <node launch-prefix="nice" pkg="rviz" type="rviz" name="rviz"
+            args="-d $(find lidar_slam_loop_test)/rviz_cfg/loop_test.rviz" />
+    </group>
+
+</launch>
